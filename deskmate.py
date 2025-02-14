@@ -28,12 +28,14 @@ SCROLL_VOL = 24
 
 # Setup GPIO (if using physical buttons)
 try:
-    import RPi.GPIO as GPIO
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup([BUTTON_HOME, BUTTON_ENTER, BUTTON_EXIT], GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup([SCROLL_NAV, SCROLL_VOL], GPIO.IN)
+    pass
+    # import RPi.GPIO as GPIO
+    # GPIO.setmode(GPIO.BCM)
+    # GPIO.setup([BUTTON_HOME, BUTTON_ENTER, BUTTON_EXIT], GPIO.IN, pull_up_down=GPIO.PUD_UP)
+    # GPIO.setup([SCROLL_NAV, SCROLL_VOL], GPIO.IN)
 except ImportError:
-    print("Running in non-RPi mode")
+    pass
+#     print("Running in non-RPi mode")
 
 # Fetch Weather Data
 def get_weather():
